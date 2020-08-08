@@ -1,0 +1,36 @@
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh/3);
+    width: calc(100%/3);
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.blue {
+    background-color: blue;    
+}
+
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+    color: #000;
+}
