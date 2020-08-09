@@ -1,0 +1,128 @@
+/* .icon {
+    border: 1px dotted #000;
+    margin: 1rem;
+    padding: 1rem;
+} */
+* { 
+    box-sizing: border-box; 
+    padding: 0; 
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+}
+
+.navbar .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1rem 0 2rem;
+    flex: 1;
+}
+
+.navbar .right .icon {
+    margin-right: 2rem;
+}
+
+.logo {
+    flex: 1;
+    padding: 0 0 0 2rem;
+    display: flex;
+}
+
+.logo img {
+    justify-content: flex-start;
+    width: 80px;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    flex: 2;
+}
+
+.searchbar input[type=text] {
+    line-height: 24px;
+    padding: 4px 8px;
+    font-weight: 400;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-right: none;
+    outline: none;
+    width: 100%;
+    max-width: 728px;
+}
+
+.searchbar button {
+    cursor: pointer;
+    width: 65px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    margin: 0;
+    color: #737373;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar button i {
+    width: 20px;
+    height: 20px;
+}
+
+.login button {
+    height: 32px;
+    width: 32px;
+    border: none;
+    background-color: #003333;
+    color: #fff;
+    border-radius: 100%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+/* Thumbnail Container */
+
+.thumb-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 250px;
+    height: 250px;
+    border: 1px dashed #000;
+    margin: 1rem 8px;
+}
+
+/* .thumbnail .image {
+    width: 100%;
+    height: 150px;
+    border: 1px dashed #000;
+} */
+
+.thumbnail .image img {
+    width: 250px;
+    height: 150px;
+}
+
+.thumbnail .info {
+    text-align: left;
+    padding: 4px 16px;
+}
+
+.thumbnail .info .title {
+    font-weight: 500;
+    line-height: 2rem;
+}
+
