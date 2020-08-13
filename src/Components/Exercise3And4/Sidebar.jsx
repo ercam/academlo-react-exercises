@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Icon from './Icon'
 
 function Sidebar() {
-    const [icons, setIcons] = useState([
+    const icons = [
         {
             iconName: "home",
             title: "Principal"
@@ -19,9 +19,10 @@ function Sidebar() {
             iconName: "video_library",
             title: "Library"
         }
-    ])
+    ];
+
     return (
-        <div>
+        <div className="sidebar">
             {icons.map(icon => <Icon icon={icon} />)} 
         </div>
     )
