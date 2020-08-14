@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Exercise3And4 from './Components/Exercise3And4/Exercise3And4';
+// import Exercise3And4 from './Components/Exercise3And4/Exercise3And4';
+import Exercise5 from './Components/Exercise5/Exercise5';
 // import Exercise1And2 from './Components/Exercise1And2/Exercise1And2';
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <div className="App">
       {/* <h1>Hello World!</h1> */}
       {/* <Exercise1And2 /> */}
-      <Exercise3And4 />
+      {/* <Exercise3And4 />*/}
+      <Exercise5 />
     </div>
   );
 }
