@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './styles.css'
 import UserList from './UserList';
 
+const url = "https://academlo-api-users.herokuapp.com/user/";
+
 export class Exercise7 extends Component {
     constructor(props){
         super(props);
@@ -57,6 +59,14 @@ export class Exercise7 extends Component {
         })
     }
 
+    deleteUser = (event, id) => {
+        event.preventDefault();
+
+        fetch(url+id, { method: "DELETE"})
+            .then(response => this.fetchUsers())
+            .catch(error => console.log(error))
+    }
+
     render() {
         return (
             <div>
@@ -82,7 +92,7 @@ export class Exercise7 extends Component {
                         <input type="submit" value="SEND"/>
                     </form>
                 </div>
-                <UserList users={this.state.users}/>
+                <UserList users={this.state.users} deleteUser={this.deleteUser}/>
             </div>
         )
     }
