@@ -1,6 +1,6 @@
 import React from 'react'
 
-function UserList({users, deleteUser}) {
+function UserList({users, deleteUser, editUser}) {
     return (
         <div className="list-container">
             <h1>User List</h1>
@@ -9,7 +9,8 @@ function UserList({users, deleteUser}) {
                     return <div className="user-card" key={user.id}>
                         <p>{user.name} {user.lastname}</p>
                         <p>{user.email}</p>
-                        <button onClick={(event) => deleteUser(event, user.id)}>DELETE</button>
+                        <button className="button" onClick={(event) => deleteUser(event, user.id)}>DELETE</button>
+                        <button className="button" onClick={() => editUser( user)}>EDIT</button>
                     </div>
                 })}
             </div>
