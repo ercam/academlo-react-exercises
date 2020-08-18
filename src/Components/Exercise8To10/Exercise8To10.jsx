@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './styles.css'
 import UserList from './UserList';
 import EditForm from './EditForm';
+import Form from './Form';
 
 const url = "https://academlo-api-users.herokuapp.com/user/";
 
@@ -10,10 +11,12 @@ export class Exercise7 extends Component {
         super(props);
         this.state = {
             users: [],
-            name: "",
-            lastname: "",
-            email: "",
-            password: "",
+            inputUser: {
+                name: "",
+                lastname: "",
+                email: "",
+                password: ""
+            },
             userEdited: {},
             toggleForm: false
         }
@@ -33,7 +36,11 @@ export class Exercise7 extends Component {
     };
 
     handleChange = (event) => {
-        this.setState({[event.target.name] : event.target.value});
+        this.setState({
+            inputUser: {
+                ...this.state.inputUser,
+                [event.target.name] : event.target.value}
+            });
     };
 
     handleSubmit = (event) => {
@@ -45,19 +52,21 @@ export class Exercise7 extends Component {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name: this.state.name,
-                lastname: this.state.lastname,
-                email: this.state.email,
-                password: this.state.password
+                name: this.state.inputUser.name,
+                lastname: this.state.inputUser.lastname,
+                email: this.state.inputUser.email,
+                password: this.state.inputUser.password
             }) 
         }).then(response => this.fetchUsers())
         .catch(error => console.log(error));
 
         this.setState({
-            name: "",
-            lastname: "",
-            email: "",
-            password: ""
+            inputUser: {
+                name: "",
+                lastname: "",
+                email: "",
+                password: ""
+            }
         });
     };
 
@@ -111,28 +120,8 @@ export class Exercise7 extends Component {
         return (
             <div>
                 {!this.state.toggleForm ? 
-                    <div className="form-container" onSubmit={this.handleSubmit}>
-                        <h1>Register</h1>
-                        <form className="form">
-                            <label>
-                                Name:
-                                <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
-                            </label>
-                            <label>
-                                Last Name:
-                                <input type="text" name="lastname" value={this.state.lastname} onChange={this.handleChange}/>
-                            </label>
-                            <label>
-                                Email:
-                                <input type="text" name="email" value={this.state.email} onChange={this.handleChange}/>
-                            </label>
-                            <label>
-                                Password:
-                                <input type="text" name="password" value={this.state.password} onChange={this.handleChange}/>
-                            </label>
-                            <input type="submit" value="SEND"/>
-                        </form>
-                    </div> :
+                    <Form user={this.state.inputUser} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+                    :
                     <EditForm user={this.state.userEdited} updateUser={this.updateUser} editInput={this.handleInputEdit}/>
                 }       
                 <UserList users={this.state.users} deleteUser={this.deleteUser} editUser={this.editUser}/>

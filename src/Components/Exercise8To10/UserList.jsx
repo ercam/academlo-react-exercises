@@ -1,6 +1,6 @@
 import React from 'react'
 
-function UserList({users, deleteUser, editUser}) {
+const UserList = ({users, deleteUser, editUser}) => {
     return (
         <div className="list-container">
             <h1>User List</h1>
