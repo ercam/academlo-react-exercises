@@ -40,3 +40,41 @@ h1 {
     margin-top: 24px;
     align-self: center;
 }
+
+.list-container {
+    border-radius: 4px;
+    border: 1px solid #000;
+    width: 90%;
+    background-color: #fff;
+    margin: 0 auto 10% auto;
+    padding: 0 16px 16px 16px;
+}
+
+.user-list {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+.user-card {
+    border: 1px solid #000;
+    border-radius: 4px;
+    /* width: 20%;
+    max-width: 20%; */
+    /* margin-right: 16px;
+    margin-bottom: 16px; */
+    background-color: #3377ff;
+    color: #fff;
+}
+
+.user-card p:first-child {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.user-card p:last-child {
+    font-size: 14px;
+}
