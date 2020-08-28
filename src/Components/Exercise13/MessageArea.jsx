@@ -1,8 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { TextField, IconButton, Icon } from '@material-ui/core'
-import store from './redux/store'
-import { setInputValue, sendMessage } from './redux/actions'
+import store from '../../redux/store'
+import { setInputValue, sendMessage } from '../../redux/chatActions'
 
 const useStyles = makeStyles(theme => ({
     form: {

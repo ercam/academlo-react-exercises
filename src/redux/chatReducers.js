@@ -3,7 +3,7 @@ import {
     DELETE_MESSAGE,
     SET_INPUT_VALUE,
     SHOW_OPTIONS
-} from './actions'
+} from './chatActions'
 import moment from 'moment'
 
 moment.locale();

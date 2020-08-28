@@ -1,8 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { ListItem, ListItemText, Icon, Select, MenuItem } from '@material-ui/core'
-import store from './redux/store'
-import { showOptions, deleteMessage } from './redux/actions'
+import store from '../../redux/store'
+import { showOptions, deleteMessage } from '../../redux/chatActions'
 
 const useStyles = makeStyles(theme => ({
     root: {

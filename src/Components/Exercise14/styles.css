@@ -1,0 +1,155 @@
+:root {
+    --main-blue: #1cbeda;
+}
+
+.navbar {
+display: flex;
+background-color: rgb(35, 35, 35);
+height: 10vh;
+width: 100%;
+justify-content: space-around;
+}
+
+.navbar > h3 {
+color: #fff;
+}
+
+.cart-button {
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(35, 35, 35);
+  border: none;
+  padding: 0 1rem;
+}
+
+.cart-button:focus {
+  outline: none;
+}
+
+.shop-container {
+width: 90%;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+margin: auto;
+}
+
+.cart {
+background-color: #fff;
+padding: 1em;
+border-radius: 4px;
+display: flex;
+position: absolute;
+flex-direction: column;
+right: 15%;
+box-shadow: 1px 1px 5px #000;
+top: 5%;
+}
+
+.cart div {
+  display: flex;
+}
+
+.cart-icon {
+color: #fff;
+}
+.cart img {
+  width: 30px;
+  max-height: 30px;
+  flex: 0 1 auto;
+}
+
+.cart .name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 1rem;
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.cart .count {
+  margin-left: 1rem;
+  font-size: 20px;
+  flex: 0 1 auto;
+}
+
+.cart .remove {
+  flex: 0 1 auto;
+}
+
+.cart .total-price {
+  display: block;
+  margin-top: 8px;
+  padding: 8px;
+  border-top: 1px solid #000; 
+}
+
+.cart .total-price p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.cart .total-price p span {
+  font-weight: 600;
+}
+
+/* Product */
+.product {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 85%;
+justify-content: space-between;
+background-color: #fff;
+border-radius: 20px;
+margin: 30px 0;
+padding: 20px 10px;
+transition: background-color 300ms ease-in-out;
+}
+
+.product > img {
+max-height: 35vh;
+}
+
+.product:hover {
+background-color: rgb(244, 244, 244);
+}
+
+.logo {
+width: 350px;
+height: auto;
+object-fit: contain;
+}
+
+/* Helpers */
+.btn {
+padding: 10px 15px;
+border: 0;
+border-radius: 30px;
+background-color: var(--main-blue);
+color: #fff;
+transition: background-color 300ms ease-in-out;
+}
+.btn:hover {
+background-color: #148da3;
+}
+.shadow {
+-webkit-box-shadow: 10px 4px 58px -33px rgba(0, 0, 0, 0.45);
+-moz-box-shadow: 10px 4px 58px -33px rgba(0, 0, 0, 0.45);
+box-shadow: 10px 4px 58px -33px rgba(0, 0, 0, 0.45);
+}
+/* Letetring */
+.bold {
+font-weight: bold;
+}
+/* Debug */
+.debug {
+border: 1px solid red;
+}
+
+.remove {
+  cursor: pointer;
+  background-color: #fff;
+  color: red;
+  border: none;
+  margin-left: 0.5rem;
+}

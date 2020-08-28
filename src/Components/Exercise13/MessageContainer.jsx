@@ -2,7 +2,7 @@ import React from 'react'
 import MessageItem from './MessageItem'
 import { makeStyles } from '@material-ui/core/styles'
 import { List } from '@material-ui/core'
-import store from './redux/store'
+import store from '../../redux/store'
 
 const useStyles = makeStyles(theme => ({
     list: {
