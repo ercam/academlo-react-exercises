@@ -2,6 +2,10 @@ body {
     background-color: #80aaff;
 }
 
+.container {
+    width: 100%;
+}
+
 .form-container {
     border-radius: 4px;
     border: 1px solid #000;
@@ -71,16 +75,12 @@ h1 {
     margin-bottom: 0;
 }
 
-.user-card p:last-child {
-    font-size: 20px;
-}
-
 .user-card .button {
     cursor: pointer;
     font-size: 12px;
     border: 1px solid #000;
     background-color: #fff;
+    width: 120px;
     padding: 8px 16px;
-    margin-bottom: 16px;
-    margin-right: 16px;
+    margin: 8px 16px;
 }

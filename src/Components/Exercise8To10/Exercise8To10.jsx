@@ -118,7 +118,7 @@ export class Exercise7 extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 {!this.state.toggleForm ? 
                     <Form user={this.state.inputUser} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
                     :

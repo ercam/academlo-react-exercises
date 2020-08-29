@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/store'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 const render = () => {
   ReactDOM.render(
     <React.StrictMode>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </React.StrictMode>,
     document.getElementById('root')
   );
