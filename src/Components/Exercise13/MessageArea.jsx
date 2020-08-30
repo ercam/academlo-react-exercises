@@ -7,7 +7,7 @@ import { setInputValue, sendMessage } from '../../redux/chatActions'
 const useStyles = makeStyles(theme => ({
     form: {
         margin: '0 auto',
-        backgroundColor: '#4080bf'
+        backgroundColor: '#404040'
     },
     textarea: {
         margin: theme.spacing(1),
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     button: {
         margin: theme.spacing(1.5),
         '&:hover': {
-            backgroundColor: '#4080bf'
+            backgroundColor: '#404040'
         }
     },
     icon: {
@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
 
 const MessageArea = () => {
     const classes = useStyles();
-    const value = store.getState().inputMessage;
+    const value = store.getState().chatApp.inputMessage;
 
     const handleChange = event => {
         store.dispatch(setInputValue(event.target.value));
@@ -41,6 +41,15 @@ const MessageArea = () => {
         event.preventDefault();
         store.dispatch(sendMessage());
         console.log(store.getState());
+    }
+
+    const handleEnterSubmit = event => {
+        if(event.key === 'Enter'){
+            event.preventDefault();
+            if(value){
+                store.dispatch(sendMessage());
+            }
+        } 
     }
 
     return (
@@ -53,7 +62,7 @@ const MessageArea = () => {
                 className={classes.textarea}
                 value={value}
                 onChange={handleChange}
-                // onKeyDown={(event => event.key === 'Enter' ? event.preventDefault() : "")}
+                onKeyDown={handleEnterSubmit}
             />
             <IconButton 
                 aria-label="send"

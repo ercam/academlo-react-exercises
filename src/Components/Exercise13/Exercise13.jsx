@@ -1,29 +1,51 @@
 import React from 'react'
 import MessageArea from './MessageArea'
 import MessageContainer from './MessageContainer'
-import { Container } from '@material-ui/core'
-// import store from './redux/store'
+import { makeStyles } from '@material-ui/core/styles'
+import { Container, Typography } from '@material-ui/core'
 
-// let unsubscribe = store.subscribe(() =>
-//   console.log(store.getState())
-// )
-
-// unsubscribe();
+const useStyles = makeStyles(theme => ({
+    mainContainer: {
+        height: '90vh',
+        width:'90%', 
+        margin: '5vh auto',
+        padding: '0',
+        display: 'flex', 
+        flexDirection: 'column',
+        boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.2)'
+    },
+    headerContainer: {
+        flex: '0 1 56px', 
+        backgroundColor: '#404040'
+    },
+    header: {
+        color: '#fff', 
+        margin: '0px'
+    },
+    messageContainer: {
+        flex: '1 1 auto', 
+        backgroundColor: '#ecf2f9'
+    },
+    messageArea: {
+        flex: '0 1 56px'
+    }
+}))
 
 const Exercise13 = () => {
+    const classes = useStyles();
     return (
-        <Container style={{height: '100vh'}}>
-            <div style={{display: 'flex', flexFlow: 'column', height: '100%'}}>
-                <div style={{flex: '0 1 56px', backgroundColor: '#4080bf', }}>
-                    <h1 style={{color: '#fff', margin: '0px'}}>CHAT</h1>
+        <Container className={classes.mainContainer}>
+                <div className={classes.headerContainer}>
+                    <Typography variant="h3" component="h1" className={classes.header}>
+                        CHAT
+                    </Typography>
                 </div>
-                <div style={{flex: '1 1 auto', backgroundColor: '#ecf2f9'}}>
+                <div className={classes.messageContainer}>
                     <MessageContainer />
                 </div>
-                <div style={{flex: '0 1 56px'}}>
+                <div className={classes.messageArea}>
                     <MessageArea />       
                 </div>
-            </div>
         </Container>
     )
 }

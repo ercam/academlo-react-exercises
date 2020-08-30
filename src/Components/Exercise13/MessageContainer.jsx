@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
 
 const MessageContainer = () => {
     const classes = useStyles();
-    const messages = store.getState().messages;
+    const messages = store.getState().chatApp.messages;
     return (
         <List className={classes.list}>
             {messages.map((message, id) => 

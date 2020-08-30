@@ -18,12 +18,10 @@ const useStyles = makeStyles(theme => ({
     listItemText: {
         display: 'flex',
         backgroundColor: '#fff',
-        // border: '1px solid #000',
         padding: '8px 8px 8px 16px',
         borderRadius: '8px'
     },
     icon: {
-        // marginLeft: theme.spacing(1),
         '&:hover': {
             cursor: 'pointer'
         }

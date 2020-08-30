@@ -26,6 +26,10 @@ color: #fff;
   outline: none;
 }
 
+.cart-button i {
+  font-size: 32px;
+}
+
 .shop-container {
 width: 90%;
 display: grid;
